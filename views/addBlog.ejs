@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontawsom -->
+    <link rel="stylesheet" href="asset/css/all.min.css">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="asset/css/bootstrap-icons.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body data-bs-theme="dark" class="bg-black">
+    <%- include('partial/header.ejs') %>
+    
+    <!-- add blogs -->
+    <section class="blog" style="margin-top: 5rem;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <form action="/addBlog" method="post" enctype="multipart/form-data">
+                        <div class="border border-info p-5 rounded-3">
+                            <h2 class="text-center">Add blog...</h2>
+                            <label class="form-label text-info-emphasis fw-semibold" for="">Title</label>
+                            <input type="text" name="title" class="form-control p-3 mb-4 focus-ring focus-ring-dark border-info bg-black border text-info-emphasis">
+                            <label class="form-label text-info-emphasis fw-semibold" for="">Image</label>
+                            <input type="file" class="custom-file-input form-control p-3 mb-4 focus-ring focus-ring-dark border-info bg-black border text-info-emphasis" name="image" />
+                            <label class="form-label text-info-emphasis fw-semibold" for="">Rating</label>
+                            <select name="rating" class="form-control p-3 mb-4 focus-ring focus-ring-dark border-info bg-black border text-info-emphasis">
+                                <option value="--">Rating</option>
+                                <option value="★">★</option>
+                                <option value="★★">★★</option>
+                                <option value="★★★">★★★</option>
+                                <option value="★★★★">★★★★</option>
+                                <option value="★★★★★">★★★★★</option>
+                            </select>
+                            <label class="form-label text-info-emphasis fw-semibold" for="">Discription</label>
+                            <input type="text" name="discription" class="form-control p-3 mb-4 focus-ring focus-ring-dark border-info bg-black border text-info-emphasis">
+                            <input type="submit" class="form-control btn btn-outline-info fw-bold py-2 focus-ring focus-ring-dark">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JQuery -->
+    <script src="asset/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <!-- main js -->
+    <script src="asset/js/main.js"></script>
+</body>
+</html>

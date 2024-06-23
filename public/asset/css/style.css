@@ -1,0 +1,31 @@
+.main-banner {
+    background-image: url(../images/main-bg-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* contact */
+.contact,
+.about {
+    background-image: url(../images/contact.webp);
+}
+
+.card img {
+    transition: all .3s linear;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* file input */
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}

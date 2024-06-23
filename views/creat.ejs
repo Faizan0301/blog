@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontawsom -->
+    <link rel="stylesheet" href="asset/css/all.min.css">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="asset/css/bootstrap-icons.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body data-bs-theme="dark" class="bg-black">
+    <%- include('partial/header.ejs') %>
+    
+    <!-- creat -->
+    <section class="pt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div id="creat" class="border border-info p-5 rounded-3">
+                        <h2 class="text-center">Creat</h2>
+                        <form action="/creat" method="post">
+                            <label for="" class="form-label text-info-emphasis fw-semibold">Name</label>
+                            <input type="text" name="username" class="form-control p-3 mb-4 focus-ring focus-ring-dark bg-black border-info border text-info-emphasis">
+                            <label for="" class="form-label text-info-emphasis fw-semibold">Email</label>
+                            <input type="text" name="email" class="form-control p-3 mb-4 focus-ring focus-ring-dark bg-black border-info border text-info-emphasis">
+                            <label for="" class="form-label text-info-emphasis fw-semibold">Phon</label>
+                            <input type="number" name="phone" class="form-control p-3 mb-4 focus-ring focus-ring-dark bg-black border-info border text-info-emphasis">
+                            <label for="" class="form-label text-info-emphasis fw-semibold">Password</label>
+                            <input type="text" name="password" class="form-control p-3 mb-4 focus-ring focus-ring-dark bg-black border-info border text-info-emphasis">
+                            <button class="btn btn-outline-info w-100 py-2 mb-4">Creat account</button>
+                            <a href="/login" class="btn btn-outline-info d-block py-2">Back to login</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JQuery -->
+    <script src="asset/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <!-- main js -->
+    <script src="asset/js/main.js"></script>
+</body>
+</html>
