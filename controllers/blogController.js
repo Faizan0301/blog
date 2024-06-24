@@ -13,23 +13,23 @@ const addBlogPage = (req, res) => {
     return res.render('addBlog')
 }
 const addBlog = async (req, res) => {
-    const { title, image, rating, discription, id } = req.body
+    const { title, image, date, discription, id } = req.body
 
     if (id) {
         if (req.file) {
             let image = req.file.path
             try {
-                const data = await blogDB.findByIdAndUpdate(id, { title, image, rating, discription })
+                const data = await blogDB.findByIdAndUpdate(id, { title, image, date, discription })
                 let oldImg = data.image
                 fs.unlinkSync(oldImg)
-                return res.redirect('/')
+                return res.redirect('/blog')
             } catch (err) {
                 console.log(err);
             }
         } else {
             try {
-                await blogDB.findByIdAndUpdate(id, { title, image, rating, discription })
-                return res.redirect('/')
+                await blogDB.findByIdAndUpdate(id, { title, image, date, discription })
+                return res.redirect('/blog')
             } catch (err) {
                 console.log(err);
             }
@@ -37,8 +37,8 @@ const addBlog = async (req, res) => {
     } else {
         let image = req.file.path
         try {
-            await blogDB.create({ title, image, rating, discription })
-            return res.redirect('/')
+            await blogDB.create({ title, image, date, discription })
+            return res.redirect('/blog')
         } catch (err) {
             console.log(err);
         }

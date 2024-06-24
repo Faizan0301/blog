@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- fontawsom -->
-    <link rel="stylesheet" href="asset/css/all.min.css">
+    <link rel="stylesheet" href="../asset/css/all.min.css">
     <!-- bootstrap icon -->
-    <link rel="stylesheet" href="asset/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../asset/css/bootstrap-icons.min.css">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
     <!-- css -->
-    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
 </head>
 <body data-bs-theme="dark" class="bg-black">
     <%- include('partial/header.ejs') %>
@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-5">
-                    <form action="/addBlog" method="post" enctype="multipart/form-data">
+                    <form action="/blog/addBlog" method="post" enctype="multipart/form-data">
                         <div class="border border-info p-5 rounded-3">
                             <h2 class="text-center">Edit blog...</h2>
                             <label class="form-label text-info-emphasis fw-semibold" for="">Title</label>
@@ -29,14 +29,8 @@
                             <input type="hidden" name="id" value="<%= data._id %>">
                             <label class="form-label text-info-emphasis fw-semibold" for="">Image</label>
                             <input type="file" class="custom-file-input form-control p-3 mb-4 focus-ring focus-ring-dark border-info bg-black border text-info-emphasis" name="image" />
-                            <label class="form-label text-info-emphasis fw-semibold" for="">Rating</label>
-                            <select name="rating" class="form-control p-3 mb-4 focus-ring focus-ring-dark border-info bg-black border text-info-emphasis">
-                                <option value="">Rating</option>
-                                <% let rating=['★','★★','★★★','★★★★','★★★★★'];
-                                rating.map((val)=>{ %>
-                                    <option value="<%= val %>" <% if(data.rating==val){%> selected <%} %> ><%= val %></option>
-                                <% }) %>
-                            </select>
+                            <label class="form-label text-info-emphasis fw-semibold" for="">Date</label>
+                            <input type="date" value="<%= data.date %>" name="date" class="form-control p-3 mb-4 focus-ring focus-ring-dark border-info bg-black border text-info-emphasis">
                             <label class="form-label text-info-emphasis fw-semibold" for="">Discription</label>
                             <input type="text" name="discription" value="<%= data.discription %>" class="form-control p-3 mb-4 focus-ring focus-ring-dark border-info bg-black border text-info-emphasis">
                             <input type="submit" value="Update" class="form-control btn btn-outline-info fw-bold py-2 ">
@@ -48,10 +42,10 @@
     </section>
 
     <!-- JQuery -->
-    <script src="asset/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="../asset/js/code.jquery.com_jquery-3.7.0.min.js"></script>
     <!-- bootstrap js -->
-    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="../asset/js/bootstrap.bundle.min.js"></script>
     <!-- main js -->
-    <script src="asset/js/main.js"></script>
+    <script src="../asset/js/main.js"></script>
 </body>
 </html>

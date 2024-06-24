@@ -19,25 +19,24 @@
     <!-- blog -->
     <section class="blog py-5">
         <div class="container">
-            <div class="row">
+            <h1 class="text-center mb-5 text-info-emphasis">ANIMAL BLOG</h1>
+            <div class="row justify-content-center">
 
-                <% data.map((val)=>{const {title,image,rating,discription,_id}=val %>
-                <div class="col-md-6">
+                <% data.map((val)=>{const {title,image,date,discription,_id}=val %>
+                <div class="col-md-6 mb-4">
                     <div class="card border-0">
                         <div class="overflow-hidden rounded-2 ratio ratio-1x1">
                             <img src="<%= image %>" class="card-img-top object-fit-cover" alt="blog-img">
                         </div>
                         <div class="card-body px-4">
                             <div class="bloger-name">
-                                <h3 class="text-primary"><%= title %></h3>
+                                <h3 class="text-primary fs-1"><%= title %></h3>
                             </div>
-                            <div class="blog-review pb-1" style="height:70px; overflow-y: hidden;">
-                                <p>
+                            <div class="blog-review" >
+                                <p class="pb-1 fs-4 fst-italic text-secondary-emphasis" style="height:80px; overflow: hidden;text-overflow: ellipsis;">
                                     <%= discription %>
                                 </p>
-                            </div>
-                            <div class="rating pb-2 text-warning-emphasis">
-                                <span>Rating :- <%= rating %></span>
+                                <h6 class="text-secondary-emphasis pb-2">Date:- <span class="text-secondary fst-italic"><%= date %></span></h6>
                             </div>
                             <div class="card-btn">
                                 <a href="#" class="btn btn-primary d-block">Follow</a>

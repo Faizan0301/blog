@@ -32,7 +32,7 @@ const login = async (req, res) => {
             return res.redirect('/login')
         }
 
-        return res.cookie('user', user.id).redirect('/')
+        return res.cookie('user', user.id).redirect('/blog')
     } catch (err) {
         console.log(err);
     }

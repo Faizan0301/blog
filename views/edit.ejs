@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- fontawsom -->
-    <link rel="stylesheet" href="asset/css/all.min.css">
+    <link rel="stylesheet" href="../asset/css/all.min.css">
     <!-- bootstrap icon -->
-    <link rel="stylesheet" href="asset/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../asset/css/bootstrap-icons.min.css">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
     <!-- css -->
-    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
 </head>
 <body data-bs-theme="dark">
     <%- include('partial/header.ejs') %>
@@ -26,21 +26,21 @@
                             <tr>
                                 <th>Image</th>
                                 <th>Title</th>
-                                <th>rating</th>
+                                <th>Date</th>
                                 <th>Discription</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody class="table-group-divider align-text-bottom">
-                            <% data.map((val)=>{const {title,image,rating,discription,_id}=val %>
+                            <% data.map((val)=>{const {title,image,date,discription,_id}=val %>
                             <tr>
-                                <td><img src="<%= image %>" alt="blog-img" class="object-fit-cover rounded-3" width="100px"></td>
-                                <td class="fw-semibold"><%= title %></td>
-                                <td class="text-warning"><%= rating %></td>
-                                <td class="text-nowrap"><%= discription %></td>
-                                <td>
-                                    <a href="/deleteBlog<%= _id %>" class="btn btn-outline-info me-3">Delete</a>
-                                    <a href="/editBlog<%= _id %>" class="btn btn-outline-info">Edit</a>
+                                <td><img src="../<%= image %>" alt="blog-img" class="object-fit-cover rounded-3" width="100px" height="110px"></td>
+                                <td class="fw-semibold fs-4 text-nowrap"><%= title %></td>
+                                <td class="text-secondary-emphasis fst-italic text-nowrap"><%= date %></td>
+                                <td class="text-wrap text-secondary fst-italic"><%= discription %></td>
+                                <td class="text-nowrap">
+                                    <a href="/blog/deleteBlog<%= _id %>" class="btn btn-outline-info me-3">Delete</a>
+                                    <a href="/blog/editBlog<%= _id %>" class="btn btn-outline-info">Edit</a>
                                 </td>
                             </tr>
                             <% }) %>
@@ -52,10 +52,10 @@
     </section>
 
     <!-- JQuery -->
-    <script src="asset/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="../asset/js/code.jquery.com_jquery-3.7.0.min.js"></script>
     <!-- bootstrap js -->
-    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="../asset/js/bootstrap.bundle.min.js"></script>
     <!-- main js -->
-    <script src="asset/js/main.js"></script>
+    <script src="../asset/js/main.js"></script>
 </body>
 </html>

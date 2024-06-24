@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use(cookie());
 app.use(router);
 app.use(userAuth)
-app.use(b_router)
+app.use("/blog",b_router)
 
 app.listen(8083, (err) => {
     if (!err) {

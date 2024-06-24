@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const userSchems = new mongoose.Schema({
     title: String,
     image: String,
-    rating: String,
+    date: String,
     discription: String
 });
 
